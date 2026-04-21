@@ -1,0 +1,166 @@
+/* Steelheads Cooperstown 2027 - simple, mobile-friendly */
+
+:root {
+  --navy: #0b2545;
+  --steel: #3c5575;
+  --accent: #c7a55a;
+  --bg: #fbfaf7;
+  --text: #1a1a1a;
+  --muted: #666;
+  --border: #d8d3c7;
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.55;
+  color: var(--text);
+  background: var(--bg);
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background: var(--navy);
+  color: white;
+  padding: 2rem 1.25rem 1.5rem;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0 0 0.25rem;
+  font-size: 2rem;
+  letter-spacing: 0.02em;
+}
+
+header .tagline {
+  margin: 0;
+  font-size: 1.1rem;
+  color: var(--accent);
+  font-weight: 500;
+}
+
+header .unlisted {
+  margin: 0.75rem 0 0;
+  font-size: 0.85rem;
+  color: #bfc9d9;
+  font-style: italic;
+}
+
+nav {
+  background: var(--steel);
+  padding: 0.5rem 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.25rem 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 0.9rem;
+  padding: 0.4rem 0.2rem;
+  border-bottom: 2px solid transparent;
+}
+
+nav a:hover {
+  border-bottom-color: var(--accent);
+}
+
+main {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 1.5rem 1.25rem 3rem;
+}
+
+section {
+  margin: 2rem 0 3rem;
+}
+
+section:first-of-type {
+  margin-top: 1rem;
+}
+
+h2 {
+  color: var(--navy);
+  border-bottom: 2px solid var(--accent);
+  padding-bottom: 0.35rem;
+  margin-top: 2.5rem;
+  font-size: 1.5rem;
+}
+
+h3 {
+  color: var(--steel);
+  margin-top: 1.75rem;
+  font-size: 1.15rem;
+}
+
+p { margin: 0.75rem 0; }
+
+.note {
+  font-size: 0.9rem;
+  color: var(--muted);
+  font-style: italic;
+}
+
+.table-wrap {
+  overflow-x: auto;
+  margin: 1rem 0;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  font-size: 0.95rem;
+}
+
+th, td {
+  padding: 0.6rem 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+}
+
+th {
+  background: var(--navy);
+  color: white;
+  font-weight: 600;
+}
+
+tr.total td {
+  font-weight: 700;
+  background: #fff8e8;
+  border-top: 2px solid var(--accent);
+}
+
+ul { padding-left: 1.25rem; }
+li { margin: 0.35rem 0; }
+
+footer {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 1rem 1.25rem 2rem;
+  color: var(--muted);
+  font-size: 0.85rem;
+  border-top: 1px solid var(--border);
+}
+
+@media (max-width: 540px) {
+  header h1 { font-size: 1.6rem; }
+  header .tagline { font-size: 1rem; }
+  nav { font-size: 0.85rem; gap: 0.25rem 0.75rem; }
+  h2 { font-size: 1.3rem; }
+  h3 { font-size: 1.05rem; }
+  table { font-size: 0.88rem; }
+  th, td { padding: 0.5rem 0.5rem; }
+}
